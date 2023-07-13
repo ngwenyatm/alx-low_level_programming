@@ -1,11 +1,11 @@
 #include <stdio.h>
 /**
- * random comments here
+ *main - random comments here
  *
- * just for practice
+ *Return:0 (Success)
 */
 int main(void)
 {
-	puts("Programming is like building a multilingual puzzle\n");
+	puts("\"Programming is like building a multilingual puzzle\n");
 	return (0);
 }
