@@ -11,8 +11,8 @@ int main(void)
 	
 	while (Small_char <= 'z')
 	{
-	putchar(Small_char);
-	Small_char++;
+		putchar(Small_char);
+		Small_char++;
 	}
 	while (Big_char <= 'Z')
 	{
