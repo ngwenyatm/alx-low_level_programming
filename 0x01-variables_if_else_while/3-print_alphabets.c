@@ -20,7 +20,6 @@ int main(void)
 		Big_char++;
 	}
 	putchar('\n');
-	
 	return (0);
 }
 
