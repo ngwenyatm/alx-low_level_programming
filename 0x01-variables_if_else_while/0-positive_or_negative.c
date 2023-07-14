@@ -4,8 +4,7 @@
 #include <stdio.h>
 /**
  * main - program to tell if n is positive,negative or zero
- *
- * Return: 0 with success 
+ * Return: 0 with success
  */
 int main(void)
 {
