@@ -5,12 +5,15 @@
  */
 int main(void)
 {
-	int ch = 97;
+	char letter = 'a';
 	
-	while( ch != 101 && ch != 113 && ch < 123)
+	while(letter <= 'z' )
 	{
-		putchar(ch);
-		ch++;
+		if(letter != 'q' && letter != 'e')
+		{
+			putchar(letter);
+		}
+		letter++;
 	}
 	putchar('\n');
 	return (0);
