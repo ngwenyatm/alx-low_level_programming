@@ -2,14 +2,14 @@
 
 /**
  * main - print number combo
- * Return:0
+ * Return:0 always
  */
 
 int main(void)
 {
 	int i;
 
-	for (i = 48; i <= 97; i++)
+	for (i = 48; i < 97; i++)
 	{
 		putchar(i);
 		if (i == 57)
