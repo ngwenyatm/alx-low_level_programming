@@ -1,14 +1,14 @@
 #include "main.h"
 /**
- * _abs - computes the absolute value of an integrer
+ * abs - computes the absolute value of an integrer
  *
- * @n: the int to check
+ * @n: the integer
  *
- * Return: the absolute value of the int
+ * Return: the absolute value of the integer
  *
  */
 
-int _abs(int n)
+int abs(int n)
 	{
 		if (n >= 0)
 		{
