@@ -7,23 +7,19 @@
 
 int main(void)
 {
-	int i;
-	int j = 1;
-	int k = 2;
-	int up;
-
-	j = 1;
-
-	k = 2;
+	long int i;
+	long int j = 1;
+	long int k = 2;
+	long int up;
 
 	for (i = 1; i <= 50; ++i)
 	{
 		if (j != 20365011074)
 		{
-			printf("%d, ", j);
+			printf("%ld, ", j);
 		} else
 		{
-			printf("%d\n", j);
+			printf("%ld\n", j);
 		}
 		up = j + k;
 		j = k;
