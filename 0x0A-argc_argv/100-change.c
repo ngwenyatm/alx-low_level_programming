@@ -8,7 +8,7 @@
  * @argv: array of arguments
  *
  * Return: 0 (for Success), 1 (for Error)
- * */
+ */
 int main(int argc, char *argv[])
 {
 	int num, j, result;
