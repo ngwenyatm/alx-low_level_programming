@@ -1,39 +1,61 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+/**
+ * check_num - are these even digits bro
+ * @str: array str
+ * Return: Always 0
+ */
+int check_num(char *str)
+{
+	unsigned int idx;
+
+	idx = 0;
+	while (idx < strlen(str))
+	{
+		if (!isdigit(str[idx]))
+		{
+			return (0);
+		}
+
+		idx++;
+	}
+	return (1);
+}
 
 /**
- * main - add numbers
- * @argc - counter argument
- * @argv - argument
- *
- * return: 0
+ * main - turn string into int
+ * @argc: Count
+ * @argv: Arguments
+ * Return: Always 0
  */
-int main(int argc, char **argv)
+
+int main(int argc, char *argv[])
+
 {
-	int i, j, sum;
+	int inc, intoInt;
+	int sum = 0;
 
-	sum = 0;
-	char *k;
-
-	if (arg < 2)
+	inc = 1;
+	while (inc < argc)
 	{
-		printf('0\n');
-		return (0);
-	}
+		if (check_num(argv[inc]))
 
-	for (i = 1; argv[i]; i++)
-	{
-		j = strtol(arg(argv[i], &k, 10);
-		if (*k)
 		{
-		printf("Error\n")
-		return (10);
+			intoInt = atoi(argv[inc]);
+			sum += intoInt;
 		}
+
 		else
 		{
-			sum += j;
+			printf("Error\n");
+			return (1);
 		}
+		inc++;
 	}
+
 	printf("%d\n", sum);
 	return (0);
 }
+
