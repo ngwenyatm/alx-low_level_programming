@@ -1,25 +1,25 @@
 #include "main.h"
 /**
- * _strstr - Entry point
+ * _strstr - Finds the first occurrence of a string 
  * @haystack: input
  * @needle: input
  * Return: Always 0 (Success)
  */
-char *_strstr(char *haystack, char *needle)
+char *_strstr(char *str, char *sub)
 {
-	for (; *haystack != '\0'; haystack++)
+	for (; *str != '\0'; str++)
 	{
-		char *l = haystack;
-		char *p = needle;
+		char *i = str;
+		char *j = sub;
 
-		while (*l == *p && *p != '\0')
+		while (*i == *j && *j != '\0')
 		{
-			l++;
-			p++;
+			i++;
+			j++;
 		}
 
-		if (*p == '\0')
-			return (haystack);
+		if (*j == '\0')
+			return (str);
 	}
 
 	return (0);
