@@ -11,20 +11,26 @@ char *_strdup(char *str)
 {
 	int i = 0;
 	int j = 0;
-
-	if (str == ‘\0’)
-		return (‘\0’);
-
-	while (str[i] != '\0')
-		i++;
 	char *addy;
 
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+
+	while (str[i] != '\0')
+	{
+		i++;
+	}
 	addy = malloc((i + 1) * sizeof(char));
 
-	if (addy == ‘\0’)
-		return (‘\0’);
-
+	if (addy == NULL)
+	{
+		return (NULL);
+	}
 	for (j = 0; str[j]; j++)
+	{
 		addy[j] = str[j];
+	}
 	return (addy);
 }
