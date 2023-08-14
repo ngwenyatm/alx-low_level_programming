@@ -10,7 +10,7 @@ int main(void)
 	int j;
 	int k;
 
-	for (i = 48; i < 58; n++)
+	for (i = 48; i < 58; i++)
 	{
 		for (j = 49; j < 58; j++)
 		{
@@ -31,4 +31,6 @@ int main(void)
 			}
 	}
 }
+putchar('\n');
+putchar(0);
 }
