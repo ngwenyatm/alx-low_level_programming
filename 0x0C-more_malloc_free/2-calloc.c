@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * *_memset - function that allocates memory for an array
+ * _memset - function that allocates memory for an array
  * @s: memory slot to fill
  * @b: char to copy
  * @n: how many times b should be copied
