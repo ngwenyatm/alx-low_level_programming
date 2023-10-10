@@ -10,8 +10,8 @@
 		if (d)
 		{
 			free(d);
-			free(*d.name);
-			free(*d.owner);
+			free(d->name);
+			free(d->owner);
 			
 		}
 	}
