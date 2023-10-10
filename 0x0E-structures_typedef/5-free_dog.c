@@ -1,17 +1,17 @@
 #include <stdlib.h>
 #include "dog.h"
 
-/**
- * free_dog - frees memory allocated for a struct dog
- * @d: struct dog to be freed
- */
-void free_dog(dog_t *d)
-{
-	if (d)
+	/**
+	 * free_dog - frees memory allocated for dog
+	 * @d: struct memory address to free
+	 */
+	void free_dog(dog_t *d)
 	{
-		free(d->name);
-		free(d->owner);
-		free(d);
+		if (d)
+		{
+			free(d);
+			free(*d.name);
+			free(*d.owner);
+			
+		}
 	}
-}
-
