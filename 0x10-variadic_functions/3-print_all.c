@@ -9,7 +9,7 @@
 void print_all(const char * const format, ...)
 {
 	int i = 0;
-	char *space = " ";
+	char *space = "";
 	char *str;
 
 	va_list all;
@@ -23,13 +23,13 @@ void print_all(const char * const format, ...)
 			switch (format[i])
 			{
 				case 'c':
-					printf("%s%c", space, va_arg(all, char));
+					printf("%s%c", space, va_arg(all, int));
 					break;
 				case 'i':
 					printf("%s%d", space, va_arg(all, int));
 					break;
 				case 'f':
-					printf("%s%f", space, va_arg(all, float));
+					printf("%s%f", space, va_arg(all, double));
 					break;
 				case 's':
 					str = va_arg(all, char *);
