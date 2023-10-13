@@ -11,7 +11,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int a, b, res;
+	int a, b;
+	int res;
 	char op;
 	int (*fptr)(int, int);
 
@@ -34,7 +35,7 @@ int main(int argc, char *argv[])
 
 	op = *argv[2];
 
-	if ((op == '/' || op == '%') && b == 0)
+	if (b == 0 && (op == '/' || op == '%'))
 	{
 		printf("Error\n");
 		exit(100);
@@ -43,6 +44,5 @@ int main(int argc, char *argv[])
 	res = fptr(a, b);
 
 	printf("%d\n", res);
-
 	return (0);
 }
