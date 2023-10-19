@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main.h"
+#include "lists.h"
 
 /**
  * print_list - prints all the elements of a linked list
@@ -14,7 +14,7 @@ u{
 	while (h)
 	{
 		if (h->str == NULL)
-			printf("[0]" "(nil)\n");
+			printf("[0] (nil)\n");
 		else
 			printf("[%u] %s\n", h->len, h->str);
 		h = h->next;
