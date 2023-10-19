@@ -1,3 +1,6 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include<string.h>
 #include <stddef.h>
 #include "lists.h"
 
@@ -10,16 +13,15 @@
 
 list_t *add_node_end(list_t **head, const char *str)
 {
+	int count = 0;
+	
 	list_t *newNode;
 
 	list_t *hold;
 
 	hold = *head;
 
-	int count = 0;
-
-	while (str[count])
-		count++;
+	for(count = 0; (str[count]);count++)
 
 	newNode = malloc(sizeof(list_t));
 
