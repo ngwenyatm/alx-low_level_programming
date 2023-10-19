@@ -8,7 +8,7 @@
  * Return: number of nodes that are printed
  */
 size_t print_list(const list_t *h)
-u{
+{
 	size_t count = 0;
 
 	while (h)
