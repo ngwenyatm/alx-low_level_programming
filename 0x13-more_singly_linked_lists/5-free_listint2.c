@@ -4,16 +4,16 @@
  */
 void free_listint2(listint_t **head)
 {
- listint_t *hold;
+	listint_t *hold;
 
- while (head)
- {
- hold = head->next;
+	if (head == NULL)
+		return;
 
- free(head);
-
- head = hold;
-
- }
- *head = NULL;
+	while (head)
+	{
+		hold = head->next;
+		free(head);
+		head = hold;
+	}
+	*head = NULL;
 }
