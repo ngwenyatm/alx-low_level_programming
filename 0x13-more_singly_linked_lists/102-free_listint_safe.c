@@ -1,4 +1,3 @@
-
 #include "lists.h"
 
 /**
@@ -20,7 +19,7 @@ size_t free_listint_safe(listint_t **h)
 
 	while (*h != NULL)
 	{
-		if ((*h - (*h)->next) > 0)
+		if ((*h - ((*h)->next)) > 0)
 		{
 			hold = ((*h)->next);
 			free(*h);
