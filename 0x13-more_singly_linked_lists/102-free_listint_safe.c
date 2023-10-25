@@ -9,11 +9,14 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-	int count = 0;
+	size_t count;
+
 	listint_t *hold;
 
 	if (h == NULL || *h == NULL)
 		return (0);
+
+	count = 0;
 
 	while (*h != NULL)
 	{
