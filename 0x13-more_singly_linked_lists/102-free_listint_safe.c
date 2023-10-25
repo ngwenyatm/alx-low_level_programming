@@ -17,9 +17,11 @@ size_t free_listint_safe(listint_t **h)
 
 	count = 0;
 
+	int difference = *h - ((*h)->next)
+
 	while (*h != NULL)
 	{
-		if ((*h - ((*h)->next)) > 0)
+		if (difference > 0)
 		{
 			hold = ((*h)->next);
 			free(*h);
