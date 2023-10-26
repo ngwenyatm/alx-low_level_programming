@@ -7,12 +7,15 @@
  * Return: void
  */
 
-void print_binary(unsigned long int n) 
-{ 
-    for (int i = 31; i >= 0; i--) { 
-        int shift = n >> i;  
-        if (shift & 1)  
-              printf("1"); 
-        else printf("0"); 
-    } 
-} 
+void print_binary(unsigned long int n)
+{
+	for (int i = 31; i >= 0; i--)
+	{
+		int shift = n >> i;
+
+		if (shift & 1)
+			_putchar('1');
+		else
+			_putchar('0');
+	}
+}
