@@ -16,7 +16,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 
 	bitShift = 1 << index;
 
-	*n = *n | bitShift;
+	*n |= bitShift;
 
 	return (1);
 }
