@@ -9,7 +9,9 @@
 
 void print_binary(unsigned long int n)
 {
-	for (int i = 31; i >= 0; i--)
+	int i;
+
+	for (i = 31; i >= 0; i--)
 	{
 		int shift = n >> i;
 
