@@ -14,7 +14,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 	if (index > 63)
 		return (-1);
 
-	bitshift = 1 << index;
+	bitShift = 1 << index;
 
 	*n = *n | bitShift;
 
