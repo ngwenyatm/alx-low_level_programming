@@ -17,7 +17,7 @@ return (-1);
 
 fileD = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 
-writ = (fileD, text_content, len);
+writ = write(fileD, text_content, count);
 
 if (fileD == -1 || writ == -1)
 return (-1);
