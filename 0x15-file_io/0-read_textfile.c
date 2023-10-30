@@ -32,7 +32,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	numrd = read(filedes, buffer, letters);
-	numwr = write(STDOUT_FILENO, bufffer, numrd);
+	numwr = write(STDOUT_FILENO, buffer, numrd);
 	free(buffer);
 	close(filedes);
 
