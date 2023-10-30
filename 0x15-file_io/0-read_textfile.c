@@ -11,31 +11,31 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int filedes;
-	
+
 	ssize_t numrd;
-	
+
 	ssize_t numwr;
-	
+
 	char *buffer;
-	
+
 	if (filename == NULL)
 		return (0);
-	
+
 	filedes = open(filename, O_RDONLY);
-	
+
 	if (filedes == -1)
 		return (0);
-	
+
 	buffer = malloc(sizeof(char) * (letters));
-	
+
 	if (buffer == NULL)
 		return (0);
-	
+
 	numrd = read(filedes, buffer, letters);
-	numwr = write(STDOUT_FILENO, bufffer,numrd);
-	close(filedes);
+	numwr = write(STDOUT_FILENO, bufffer, numrd);
 	free(buffer);
-	
+	close(filedes);
+
 	return (numwr);
 }
 
