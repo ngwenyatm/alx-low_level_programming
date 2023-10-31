@@ -19,6 +19,8 @@ fileD = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 
 if (fileD == -1)
 	return (-1);
+if (text_content == NULL)
+	text_content = "";
 
 for (count = 0; text_content[count]; count++)
 	;
