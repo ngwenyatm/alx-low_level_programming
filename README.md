@@ -1,1 +1,1 @@
-0x14. C - Bit manipulation
+0x17. C - Doubly linked lists
