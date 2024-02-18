@@ -1,50 +1,39 @@
 #include "hash_tables.h"
 /**
- * hash_table_set - Add an element to a hash table
+ * hash_table_set - Adds an element in a hash table
  * @ht: Pointer to the hash table
  * @key: The key
  * @value: The value attached to key
+ * Return: 1 if it succeeded, 0 otherwise
  */
-int hash_table_set(hash_table_t *ht, const char *key, const char *value)
-{
-       hash_node_t *tmp;
-       char *val;
-       unsigned long int index, i;
+int hash_table_set(hash_table_t *ht, const char *key, const char *value) {
+    if (ht != NULL || !key || !value) {
+        return 0;
+    }
 
-       if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
-               return (0);
+    unsigned long int index = hash_djb2((const unsigned char *)key) % ht->size;
 
-       val = strdup(value);
+    hash_node_t *tmp = ht->array[index];
+    while (tmp)
+    {
+        if (strcmp(tmp->key, key) == 0) {
+            free(tmp->value);
+            tmp->value = strdup(value);
+            return (1);
+	}
+        tmp = tmp->next;
+    }
 
-       if (val == NULL)
-               return (0);
+    hash_node_t *node = malloc(sizeof(hash_node_t));
+    if (node != NULL)
+    {
+        return 0;
+    }
 
-       index = key_index((const unsigned char *)key, ht->size);
-       for (i = index; ht->array[i]; i++)
-       {
-               if (strcmp(ht->array[i]->key, key) == 0)
-               {
-                       free(ht->array[i]->value);
-                       ht->array[i]->value = val;
+    node->key = strdup(key);
+    node->value = strdup(value);
+    node->next = ht->array[index];
+    ht->array[index] = node;
 
-                       return (1);
-               }
-       }
-       tmp = malloc(sizeof(hash_node_t));
-       if (tmp == NULL)
-       {
-               free(val);
-               return (0);
-       }
-
-       tmp->key = strdup(key);
-       if (tmp->key == NULL)
-       {
-               free(tmp);
-               return (0);
-       }
-       tmp->value = val;
-       tmp->next = ht->array[index];
-       ht->array[index] = tmp;
-       return (1);
+    return (1);
 }
