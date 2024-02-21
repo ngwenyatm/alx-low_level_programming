@@ -14,10 +14,16 @@ void hash_table_delete(hash_table_t *ht)
 	for (i = 0; i < ht->size; i++)
 	{
 		hold = ht->array[i];
-for (hash_node_t *free_progress = hold; free_progress; free_progress = free_progress->next) {
-  free(free_progress->key);
-  free(free_progress->value);
-  free(free_progress);
+		while (hold)
+		{
+			freedoms_progress = hold;
+			hold = hold->next;
+			if (freedoms_progress->key)
+				free(freedoms_progress->key);
+			if (freedoms_progress->value)
+				free(freedoms_progress->value);
+			free(freedoms_progress);
+		}
 }
 	}
 	free(ht->array);
